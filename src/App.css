@@ -129,3 +129,21 @@ fieldset{
   text-align: center;
   align-self: center;
 }
+
+.answers-container input[type='radio']:disabled+label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.score{
+  align-self:center ;
+}
+
+.answers-container label.correct-answer{
+  background-color: #94d7a2 !important;
+  border:1px solid #94d7a2;
+}
+
+.answers-container label.wrong-answer{
+  background-color: #F8BCBC !important;
+  border:1px solid #F8BCBC;
+}

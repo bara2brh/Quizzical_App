@@ -1,7 +1,7 @@
 import { encode, decode } from 'html-entities';
 
 export default function Quiz(props) {
-    
+
     let shuffledArray = [...props.incorrect_answers, props.correct_answer]
     shuffledArray = shuffle(shuffledArray)
 
@@ -11,7 +11,6 @@ export default function Quiz(props) {
 
             let randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
-
             [array[currentIndex], array[randomIndex]] = [
                 array[randomIndex], array[currentIndex]];
         }
@@ -24,13 +23,33 @@ export default function Quiz(props) {
             <fieldset id={props.id}>
                 <div className="answers-container">
 
-                    <input type="radio" name="answer" id={props.id + "first"} />
+                    <input type="radio"
+                        data-question_id={props.id}
+                        name="answer"
+                        value={decode(shuffledArray[0])}
+                        id={props.id + "first"}
+                        onChange={(e) => props.handleChange(e.target)} />
                     <label htmlFor={props.id + "first"}>{decode(shuffledArray[0])}</label>
-                    <input type="radio" name="answer" id={props.id + "second"} />
+                    <input type="radio"
+                        data-question_id={props.id}
+                        name="answer"
+                        value={decode(shuffledArray[1])}
+                        id={props.id + "second"}
+                        onChange={(e) => props.handleChange(e.target)} />
                     <label htmlFor={props.id + "second"}>{decode(shuffledArray[1])}</label>
-                    <input type="radio" name="answer" id={props.id + "third"} />
+                    <input type="radio"
+                        data-question_id={props.id}
+                        name="answer"
+                        value={decode(shuffledArray[2])}
+                        id={props.id + "third"}
+                        onChange={(e) => props.handleChange(e.target)} />
                     <label htmlFor={props.id + "third"}>{decode(shuffledArray[2])}</label>
-                    <input type="radio" name="answer" id={props.id + "forth"} />
+                    <input type="radio"
+                        data-question_id={props.id}
+                        name="answer"
+                        value={decode(shuffledArray[3])}
+                        id={props.id + "forth"}
+                        onChange={(e) => props.handleChange(e.target)} />
                     <label htmlFor={props.id + "forth"}>{decode(shuffledArray[3])}</label>
 
                 </div>

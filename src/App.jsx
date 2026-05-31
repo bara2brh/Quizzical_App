@@ -18,15 +18,15 @@ function App() {
     setIsGameStarted(!isGameStarted)
   }
 
-  function initQuizList(quizData){
-      return quizData.map((quiz,index) => (
-     <Quiz
-      id={index}
-      key={index}
-      question={quiz.question}
-      correct_answer={quiz.correct_answer}
-      incorrect_answers={quiz.incorrect_answers} />
-      ))
+  function initQuizList(quizData) {
+    return quizData.map((quiz, index) => (
+      <Quiz
+        id={index}
+        key={index}
+        question={quiz.question}
+        correct_answer={quiz.correct_answer}
+        incorrect_answers={quiz.incorrect_answers} />
+    ))
   }
 
   return (

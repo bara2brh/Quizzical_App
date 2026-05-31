@@ -89,7 +89,7 @@ main {
 }
 
 .answers-container label {
-  padding: 5px 30px;
+  padding: 5px 20px;
   background-color: transparent;
   color: #293264;
   border: 1.5px solid #293264;
@@ -118,7 +118,7 @@ fieldset{
 }
 
 .question hr {
-  width: 110%;
+  width: 80vw;
   border: none;
   height: 2px;
   background-color: #DBDEF0;

@@ -99,13 +99,14 @@ main {
 
 .answers-container label:hover {
   background-color: rgb(236, 236, 236);
+  cursor: pointer;
 
 }
 
 .answers-container input[type='radio']:checked+label {
   background-color: #D6DBF5;
-  border: none;
-  transition: 0.5s;
+  border: 1.5px solid #D6DBF5;
+  transition: 0.3s;
 }
 
 .question hr {

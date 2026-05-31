@@ -41,7 +41,7 @@ main {
   color: #F5F7FB;
   border-radius: 15px;
   border: none;
-  padding: 20px 0px;
+  padding: 15px 0px;
   width: 100%;
   font: inherit;
   font-weight: 500;
@@ -58,9 +58,11 @@ main {
 .quiz-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
+  justify-content: space-between;
+  align-items: start;
+  gap: 40px;
+  max-width: 80%;
+
 }
 
 .question {
@@ -109,9 +111,21 @@ main {
   transition: 0.3s;
 }
 
+fieldset{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .question hr {
   width: 110%;
   border: none;
   height: 2px;
   background-color: #DBDEF0;
+}
+
+.btn-check {
+  width: 30%;
+  text-align: center;
+  align-self: center;
 }

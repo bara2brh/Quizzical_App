@@ -82,6 +82,7 @@ main {
   flex-direction: row;
   align-items: start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .answers-container input[type='radio'] {

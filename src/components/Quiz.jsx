@@ -8,7 +8,7 @@ export default function Quiz(props) {
             ...props.incorrect_answers,
             props.correct_answer
         ]);
-    }, []);
+    }, [props.incorrect_answers, props.correct_answer]);
 
     function shuffle(array) {
         let currentIndex = array.length;
@@ -51,6 +51,7 @@ export default function Quiz(props) {
                                     name={props.id}
                                     value={decode(answer)}
                                     id={`${props.id}-${index}`}
+                                    checked={props.selectedAnswer === decode(answer)}
                                     onChange={(e) =>
                                         props.handleChange(e.target)
                                     }
